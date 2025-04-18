@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 30px 0;
+}
+
+
+.selected,
+.selected:hover {
+  background-color: var(--clr-orange);
+  color: white;
+}

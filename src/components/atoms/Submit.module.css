@@ -1,0 +1,25 @@
+@import '../../variables.css';
+
+.Submit {
+  background-color: var(--clr-orange);
+  color: var(--clr-grey950);
+  font-weight: var(--fw-bold);
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
+  cursor: pointer;
+}
+
+
+.Submit:hover,
+.Submit:focus {
+  background-color: white;
+}
+
+
+.Submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

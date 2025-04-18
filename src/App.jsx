@@ -1,5 +1,8 @@
 /** Component Imports */
-import Example from './components/Example'
+import { useState } from 'react';
+import RatingCard from './components/RatingCard.jsx';
+import ThankYouCard from './components/ThankYouCard.jsx';
+// import styles from './styles.css';
 
 /**
  * This is the entry point for your react-app
@@ -13,36 +16,29 @@ import Example from './components/Example'
  *  4. We added additional comments below to guide you
  */
 
+
+// import { useState } from 'react';
+import Rating from './components/RatingCard.jsx';
+import ThankYou from './components/ThankYouCard.jsx';
+import './style.css';
+
 const App = () => {
+  const [selected, setSelected] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+
   return (
-    <div>
-      {<Example /> /** You can remove this when you wish, it's provided as an example of modular styling */}
-      
-      {/** Rating state start **/}
-
-      How did we do?
-
-      Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!
-
-      1 2 3 4 5
-
-      Submit
-
-      {/** Rating state end **/}
-
-      {/** Thank you state start **/}
-
-      You selected {/** Add rating here **/} out of 5
-
-      Thank you!
-
-      We appreciate you taking the time to give a rating. If you ever need more support, 
-      don’t hesitate to get in touch!
-
-      {/** Thank you state end **/}
+    <div className="app-container">
+      {!submitted ? (
+        <Rating
+          selected={selected}
+          setSelected={setSelected}
+          setSubmitted={setSubmitted}
+        />
+      ) : (
+        <ThankYou selected={selected} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

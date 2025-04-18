@@ -1,0 +1,14 @@
+@import '../../variables.css';
+
+.Response {
+  background-color: var(--clr-grey900);
+  color: var(--clr-orange);
+  border-radius: 20px;
+  height: 30px;
+  width: 60%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+}
