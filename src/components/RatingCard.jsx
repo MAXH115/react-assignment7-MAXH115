@@ -1,7 +1,7 @@
 // components/RatingCard.jsx
 import { useState } from 'react';
 import styles from './RatingCard.module.css';
-import RatingRow from '../components/modules/Ratingrow.jsx';
+import RatingRow from '../components/modules/RatingRow.jsx';
 import Submit from '../components/atoms/Submit.jsx';
 import star from '../../images/icon-star.svg';
 
